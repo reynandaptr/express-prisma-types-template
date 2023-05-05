@@ -1,5 +1,5 @@
 {
-  "name": "express-prisma-types-template",
+  "name": "@reynandaptr/express-prisma-types",
   "version": "1.0.0",
   "description": "",
   "scripts": {
