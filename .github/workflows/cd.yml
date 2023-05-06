@@ -40,7 +40,7 @@ jobs:
           tag: '${{ steps.tag_version.outputs.new_tag }}'
           new_branch: update-types-migration-${{ steps.tag_version.outputs.new_tag }}
       - uses: fregante/setup-git-user@v2
-      - run: make GIT_REPOSITORY_HOST=${{ vars.GIT_REPOSITORY_HOST }} PROJECT_GROUP=${{ vars.PROJECT_GROUP }} PROJECT_NAME=${{ vars.PROJECT_NAME }} TAG_VERSION=${{ steps.tag_version.outputs.new_tag }} PAT=${{ secrets.PAT }}
+      - run: make GIT_REPOSITORY_HOST=${{ vars.GIT_REPOSITORY_HOST }} PROJECT_GROUP=${{ vars.PROJECT_GROUP }} PROJECT_NAME=${{ vars.PROJECT_NAME }} TAG_VERSION=${{ steps.tag_version.outputs.new_tag }}
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL_TEST }}
       - run: |
