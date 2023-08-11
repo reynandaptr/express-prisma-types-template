@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "prisma generate",
     "build": "tsc",
     "prepare": "husky install"
   },

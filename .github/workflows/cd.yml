@@ -23,7 +23,6 @@ jobs:
       - run: npm version ${{ steps.tag_version.outputs.new_tag }} --no-git-tag-version
       - run: npm install -g pnpm
       - run: pnpm install
-      - run: npx prisma generate
       - run: pnpm build
       - run: rm -rf src
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
